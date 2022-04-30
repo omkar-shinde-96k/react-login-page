@@ -1,0 +1,144 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgb(29, 83, 161);
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90vw;
+  height: 75vh;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  z-index: 2;
+}
+
+
+.skew {
+  width: 50%;
+  height: 100%;
+  content: "onk";
+  color: wheat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: white;
+  z-index: -1;
+  transform: skewX(-17deg);
+  transform-origin: top left;
+}
+
+.innerskew {
+  position: relative;
+  width: 100%;
+  height: 100.1%;
+  background-color: rgb(29, 83, 161);
+  top: 0;
+  right: -96%;
+  transform: skewX(-17deg);
+  transform-origin: top left;
+}
+
+.leftdiv {
+  width: 50%;
+  height: 100%;
+  background-color: white;
+  display: flex;
+  /* justify-content: start;
+  align-items: center; */
+  position: relative;
+
+}
+
+.leftDetails {
+  width: 100%;
+}
+
+
+.rightdiv {
+  width: 50%;
+  height: 100%;
+  background-color: rgb(29, 83, 161);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-form {
+  width: 50%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+}
+
+input,
+label {
+  height: 45px;
+  display: flex;
+  align-items: center;
+  border-radius: 3px;
+  outline: none;
+  border: none;
+}
+
+.login-form .third-sec {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.login-form .third-sec .remeberme {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+a {
+  color: rgb(0, 157, 255);
+  text-decoration: none;
+}
+
+button {
+  width: 100%;
+  height: 45px;
+  background-color: rgb(77, 124, 254);
+  border-radius: 3px;
+  border: none;
+  color: white;
+  /* outline: none !important; */
+  cursor: pointer;
+}
+
+
+@media only screen and (max-width: 800px) {
+  .innerskew {
+    display: none;
+  }
+
+  .box {
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    width: 93vw;
+  }
+  .rightdiv{
+    width: 100%;
+    height: 100%;
+  }
+  .leftdiv{
+    display: none;
+    width: 0;
+    height: 0; 
+  }
+}
